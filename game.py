@@ -21,10 +21,10 @@ def main():
 
         while True:
             try:
-                row = int(input("Vvedite nomer stroki: "))
+                row = int(input("vvedite nomer stolbca: "))
                 if row < 0 or row >= game.field_size:
                     raise FieldIndexError
-                column = int(input("Vvedite nomer stolbca: "))
+                column = int(input("vvedite nomer stroki: "))
                 if column < 0 or column >= game.field_size:
                     raise FieldIndexError
                 if game.board[row][column] != " ":

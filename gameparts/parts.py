@@ -1,10 +1,8 @@
 class Board:
-    """Klass, kotoriy opisivaet igrovoe pole."""
+    """Klass kotoriy opisivaet igrovoe pole"""
 
     field_size = 3
 
-    # Инициализировать игровое поле - список списков с пробелами.
-    # Пробелы - это пустые клетки.
     def __init__(self):
         self.board = [
             [" " for _ in range(self.field_size)] for _ in range(self.field_size)
@@ -13,11 +11,11 @@ class Board:
     def make_move(self, row, col, player):
         self.board[row][col] = player
 
-    # Метод, который отрисовывает игровое поле.
-    def display(self):
-        for row in self.board:
-            print("|".join(row))
-            print("-" * 5)
+    # нужен только при игре через терминал
+    # def display(self):
+    #     for row in self.board:
+    #         print("|".join(row))
+    #         print("-" * 5)
 
     def is_board_full(self):
         for i in range(self.field_size):
@@ -42,4 +40,4 @@ class Board:
         return False
 
     def __str__(self):
-        return "Obect igrovogo polya razmerom " f"{self.field_size}x{self.field_size}"
+        return "Object igrovogo polya razmerom " f"{self.field_size}x{self.field_size}"
